@@ -1,3 +1,5 @@
+from cohere.classify import Example
+
 # sentiment analysis: labels are positive, neutral, negative
 sentiment_examples = [
     Example("I am an enthusiastic and dedicated individual who is always eager to take on new challenges and learn new things. I have a strong work ethic and thrive in environments where I can collaborate with others to achieve a common goal. I have a passion for helping others and enjoy volunteering my time to give back to my community. In my free time, I enjoy reading, traveling, and spending time with my family and friends.", "positive"), 

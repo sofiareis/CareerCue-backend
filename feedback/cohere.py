@@ -1,6 +1,5 @@
 import cohere
-from cohere.classify import Example
-from training import *
+from feedback.training import *
 
 API_KEY = 'fyTCYfZc3ubA4J9ynNiZwWVmKkBDGVyCFQeIN7vd'
 co = cohere.Client(API_KEY)
@@ -22,4 +21,6 @@ def classify_word_choice(input):
     )
 
     return response.classifications[0].prediction
+
+# add classify clarity
 
