@@ -17,8 +17,8 @@ def feedback():
     answer = request.args.get("answer")
     sentiment = classify_sentiment(answer)
     word_choice = classify_word_choice(answer)
+    clarity = classify_clarity(answer)
 
-    response = jsonify({"sentiment": sentiment, "word_choice": word_choice})
-    #response.headers.add('Access-Control-Allow-Origin', 'http://localhost:3000')
+    response = jsonify({"sentiment": sentiment, "word_choice": word_choice, "clarity": clarity})
 
     return response
