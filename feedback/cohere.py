@@ -1,7 +1,7 @@
 import cohere
 from feedback.training import *
+from feedback.api_key import *
 
-API_KEY = 'fyTCYfZc3ubA4J9ynNiZwWVmKkBDGVyCFQeIN7vd'
 co = cohere.Client(API_KEY)
 
 def classify_sentiment(input):
@@ -22,5 +22,12 @@ def classify_word_choice(input):
 
     return response.classifications[0].prediction
 
-# add classify clarity
+def classify_clarity(input):
+    response = co.classify(
+        model='large',
+        inputs=[input],
+        examples=clarity_examples,
+    )
+
+    return response.classifications[0].prediction
 
