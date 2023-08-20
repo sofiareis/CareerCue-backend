@@ -1,4 +1,5 @@
-from cohere.classify import Example
+#from cohere.classify import Example
+from cohere.responses.classify import Example
 
 # sentiment analysis: labels are positive, neutral, negative
 sentiment_examples = [
