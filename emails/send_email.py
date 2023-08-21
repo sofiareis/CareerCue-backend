@@ -27,6 +27,8 @@ def send_email(data):
                     <li>Word choice: {q['wordChoice']}</li>
                     <li>Clarity: {q['clarity']}</li>
                     <li>Tone: {q['tone']}</li>
+                    <li>Structure: {q['structure']}</li>
+                    <li>Specific: {q['specific']}</li>
                     <li>Timing: {timing}</li>
                 </ul>
             </li>""")

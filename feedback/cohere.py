@@ -31,3 +31,21 @@ def classify_clarity(input):
 
     return response.classifications[0].prediction
 
+def classify_structure(input):
+    response = co.classify(
+        model='large',
+        inputs=[input],
+        examples=structure_examples,
+    )
+
+    return response.classifications[0].prediction
+
+def classify_specific(input):
+    response = co.classify(
+        model='large',
+        inputs=[input],
+        examples=specific_examples,
+    )
+
+    return response.classifications[0].prediction
+

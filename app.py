@@ -19,9 +19,15 @@ def feedback():
     sentiment = classify_sentiment(answer)
     word_choice = classify_word_choice(answer)
     clarity = classify_clarity(answer)
+    structure = classify_structure(answer)
+    specific = classify_specific(answer)
 
-    response = jsonify({"sentiment": sentiment, "word_choice": word_choice, "clarity": clarity})
+    #print("specifc" + specific)
 
+    response = jsonify({"sentiment": sentiment, "word_choice": word_choice, "clarity": clarity, "structure": structure, "specific": specific})
+
+    print(response)
+    
     return response
 
 @app.post("/email")
